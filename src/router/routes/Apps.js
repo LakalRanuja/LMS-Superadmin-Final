@@ -68,6 +68,36 @@ const AppRoutes = [
       navLink: '/apps/todo'
     }
   },
+  // ------------------------------------------------------------------------------
+
+  {
+    path: '/apps/notifications',
+    exact: true,
+    appLayout: true,
+    className: 'todo-application',
+    component: lazy(() => import('../../views/apps/notification'))
+  },
+  {
+    path: '/apps/todo/:filter',
+    appLayout: true,
+    exact: true,
+    className: 'todo-application',
+    component: lazy(() => import('../../views/apps/notification')),
+    meta: {
+      navLink: '/apps/todo'
+    }
+  },
+  {
+    path: '/apps/todo/tag/:tag',
+    appLayout: true,
+    className: 'todo-application',
+    component: lazy(() => import('../../views/apps/notification')),
+    meta: {
+      navLink: '/apps/todo'
+    }
+  },
+
+  // ------------------------------------------------------------------------------
   {
     path: '/apps/calendar',
     component: lazy(() => import('../../views/apps/calendar'))
@@ -166,6 +196,24 @@ const AppRoutes = [
     meta: {
       navLink: '/apps/user/view'
     }
+  },
+  {
+    path: '/apps/notification/view',
+    appLayout: true,
+    className: 'todo-application',
+    component: lazy(() => import('../../views/apps/managesubject/screens/index'))
+    // meta: {
+    //   navLink: '/apps/manageclasses'
+    // }
+  }, 
+  {
+    path: '/apps/notification/view/content',
+    appLayout: true,
+    className: 'todo-application',
+    component: lazy(() => import('../../views/apps/managesubject/screens/index'))
+    // meta: {
+    //   navLink: '/apps/manageclasses'
+    // }
   }
 ]
 

@@ -1,4 +1,4 @@
-import { Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User } from 'react-feather'
+import { Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User, Book, Bell} from 'react-feather'
 
 export default [
   {
@@ -68,7 +68,19 @@ export default [
         }
     ]
     //
+  },
+  {
+    id: 'view',
+    title: 'Notification',
+    icon: <Bell size={20} />,
+    navLink: '/apps/notification/view'
   }
+  // {
+  //   id: 'invoiceApp',
+  //   title: 'Notification New',
+  //   icon: <Bell size={20} />,
+  //   navLink: '/apps/notifications/view'
+  // }
   // {
   //   id: 'invoiceApp',
   //   title: 'Invoice',

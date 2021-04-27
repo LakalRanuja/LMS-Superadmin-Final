@@ -14,6 +14,9 @@ import calendar from '@src/views/apps/calendar/store/reducer'
 import ecommerce from '@src/views/apps/ecommerce/store/reducer'
 import dataTables from '@src/views/tables/data-tables/store/reducer'
 
+import manageSubjectContent from '@src/views/apps/managesubject/store/reducer'
+import notification from '@src/views/apps/notification/store/reducer'
+
 const rootReducer = combineReducers({
   auth,
   todo,
@@ -25,7 +28,9 @@ const rootReducer = combineReducers({
   invoice,
   calendar,
   ecommerce,
-  dataTables
+  dataTables,
+  manageSubjectContent,
+  notification
 })
 
 export default rootReducer
