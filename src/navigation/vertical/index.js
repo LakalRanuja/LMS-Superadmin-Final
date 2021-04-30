@@ -6,7 +6,7 @@ import tables from './tables'
 import others from './others'
 import dashboards from './dashboards'
 import uiElements from './ui-elements'
-import chartsAndMaps from './charts-maps'
+// import chartsAndMaps from './charts-maps'
 
 // ** Merge & Export
 export default [...dashboards, ...apps, ...pages]

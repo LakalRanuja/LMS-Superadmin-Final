@@ -66,34 +66,30 @@ const PagesRoutes = [
     component: lazy(() => import('../../views/pages/authentication/ResetPasswordV2')),
     layout: 'BlankLayout'
   },
-  {
-    path: '/pages/profile',
-    component: lazy(() => import('../../views/pages/profile'))
-  },
-  {
-    path: '/pages/faq',
-    component: lazy(() => import('../../views/pages/faq'))
-  },
-  {
-    path: '/pages/knowledge-base',
-    exact: true,
-    component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBase'))
-  },
-  {
-    path: '/pages/knowledge-base/:category',
-    exact: true,
-    component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBaseCategory')),
-    meta: {
-      navLink: '/pages/knowledge-base'
-    }
-  },
-  {
-    path: '/pages/knowledge-base/:category/:question',
-    component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBaseCategoryQuestion')),
-    meta: {
-      navLink: '/pages/knowledge-base'
-    }
-  },
+  // {
+  //   path: '/pages/profile',
+  //   component: lazy(() => import('../../views/pages/profile'))
+  // },
+  // {
+  //   path: '/pages/knowledge-base',
+  //   exact: true,
+  //   component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBase'))
+  // },
+  // {
+  //   path: '/pages/knowledge-base/:category',
+  //   exact: true,
+  //   component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBaseCategory')),
+  //   meta: {
+  //     navLink: '/pages/knowledge-base'
+  //   }
+  // },
+  // {
+  //   path: '/pages/knowledge-base/:category/:question',
+  //   component: lazy(() => import('../../views/pages/knowledge-base/KnowledgeBaseCategoryQuestion')),
+  //   meta: {
+  //     navLink: '/pages/knowledge-base'
+  //   }
+  // },
   {
     path: '/pages/account-settings',
     component: lazy(() => import('../../views/pages/account-settings'))
@@ -143,10 +139,10 @@ const PagesRoutes = [
     exact: true,
     component: () => <Redirect to='/pages/add grades/editNew/1' />
   },
-  {
-    path: '/pages/pricing',
-    component: lazy(() => import('../../views/pages/pricing'))
-  },
+  // {
+  //   path: '/pages/pricing',
+  //   component: lazy(() => import('../../views/pages/pricing'))
+  // },
   {
     path: '/misc/coming-soon',
     component: lazy(() => import('../../views/pages/misc/ComingSoon')),

@@ -12,11 +12,11 @@ const ChartMapsRoutes = [
   {
     path: '/charts/recharts',
     component: lazy(() => import('../../views/charts/recharts'))
-  },
-  {
-    path: '/maps/leaflet',
-    component: lazy(() => import('../../views/maps'))
   }
+  // {
+  //   path: '/maps/leaflet',
+  //   component: lazy(() => import('../../views/maps'))
+  // }
 ]
 
 export default ChartMapsRoutes

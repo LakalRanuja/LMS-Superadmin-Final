@@ -50,10 +50,10 @@ const UserDropdown = () => {
           <User size={14} className='mr-75' />
           <span className='align-middle'>Profile</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='/apps/email'>
+        {/* <DropdownItem tag={Link} to='/apps/email'>
           <Mail size={14} className='mr-75' />
           <span className='align-middle'>Inbox</span>
-        </DropdownItem>
+        </DropdownItem> */}
         <DropdownItem tag={Link} to='/apps/todo'>
           <CheckSquare size={14} className='mr-75' />
           <span className='align-middle'>Tasks</span>

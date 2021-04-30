@@ -21,14 +21,14 @@ export const searchArr = [
         icon: 'Home',
         link: '/'
       },
-      {
-        id: 3,
-        target: 'email',
-        isBookmarked: true,
-        title: 'Email',
-        icon: 'Mail',
-        link: '/apps/email'
-      },
+      // {
+      //   id: 3,
+      //   target: 'email',
+      //   isBookmarked: true,
+      //   title: 'Email',
+      //   icon: 'Mail',
+      //   link: '/apps/email'
+      // },
       {
         id: 4,
         target: 'chat',
@@ -230,14 +230,14 @@ export const searchArr = [
         icon: 'Zap',
         link: '/pages/faq'
       },
-      {
-        id: 29,
-        target: 'knowledgeBase',
-        isBookmarked: false,
-        title: 'Knowledge Base Page',
-        icon: 'AlignLeft',
-        link: '/pages/knowledge-base'
-      },
+      // {
+      //   id: 29,
+      //   target: 'knowledgeBase',
+      //   isBookmarked: false,
+      //   title: 'Knowledge Base Page',
+      //   icon: 'AlignLeft',
+      //   link: '/pages/knowledge-base'
+      // },
 
       {
         id: 30,
@@ -921,15 +921,15 @@ export const searchArr = [
         title: 'Recharts',
         icon: 'BarChart2',
         link: '/charts/recharts'
-      },
-      {
-        id: 117,
-        target: 'leafletMaps',
-        isBookmarked: false,
-        title: 'Leaflet Maps',
-        icon: 'MapPin',
-        link: '/maps/leaflet'
       }
+      // {
+      //   id: 117,
+      //   target: 'leafletMaps',
+      //   isBookmarked: false,
+      //   title: 'Leaflet Maps',
+      //   icon: 'MapPin',
+      //   link: '/maps/leaflet'
+      // }
     ]
   },
   {

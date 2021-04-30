@@ -99,13 +99,13 @@ export default [
         icon: <HelpCircle />,
         navLink: '/pages/faq'
       },
-      {
-        id: 'knowledgeBase',
-        title: 'Knowledge Base',
-        icon: <Info />,
-        navLink: '/pages/knowledge-base',
-        parentOf: ['/pages/knowledge-base/category/questions', '/pages/knowledge-base/category']
-      },
+      // {
+      //   id: 'knowledgeBase',
+      //   title: 'Knowledge Base',
+      //   icon: <Info />,
+      //   navLink: '/pages/knowledge-base',
+      //   parentOf: ['/pages/knowledge-base/category/questions', '/pages/knowledge-base/category']
+      // },
 
       {
         id: 'pricing',

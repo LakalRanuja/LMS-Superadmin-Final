@@ -7,12 +7,6 @@ export default [
     icon: <Box />,
     children: [
       {
-        id: 'email',
-        title: 'Email',
-        icon: <Mail />,
-        navLink: '/apps/email'
-      },
-      {
         id: 'chat',
         title: 'Chat',
         icon: <MessageSquare />,

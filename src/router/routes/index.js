@@ -3,7 +3,7 @@ import AppRoutes from './Apps'
 import FormRoutes from './Forms'
 import PagesRoutes from './Pages'
 import TablesRoutes from './Tables'
-import ChartMapsRoutes from './ChartsMaps'
+// import ChartMapsRoutes from './ChartsMaps'
 import DashboardRoutes from './Dashboards'
 import UiElementRoutes from './UiElements'
 import ExtensionsRoutes from './Extensions'
@@ -24,8 +24,8 @@ const Routes = [
   ...ExtensionsRoutes,
   ...PageLayoutsRoutes,
   ...FormRoutes,
-  ...TablesRoutes,
-  ...ChartMapsRoutes
+  ...TablesRoutes
+  // ...ChartMapsRoutes
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }

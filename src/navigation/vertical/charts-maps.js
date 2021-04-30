@@ -29,11 +29,11 @@ export default [
         navLink: '/charts/recharts'
       }
     ]
-  },
-  {
-    id: 'leafletMaps',
-    title: 'Leaflet Maps',
-    icon: <Map size={20} />,
-    navLink: '/maps/leaflet'
   }
+  // {
+  //   id: 'leafletMaps',
+  //   title: 'Leaflet Maps',
+  //   icon: <Map size={20} />,
+  //   navLink: '/maps/leaflet'
+  // }
 ]

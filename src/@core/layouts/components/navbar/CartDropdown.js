@@ -12,7 +12,7 @@ import { Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Media, Badge, But
 
 // ** Store & Actions
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartItems, deleteCartItem, getProduct } from '@src/views/apps/ecommerce/store/actions'
+// import { getCartItems, deleteCartItem, getProduct } from '@src/views/apps/ecommerce/store/actions'
 
 const CartDropdown = () => {
   // ** State
@@ -61,7 +61,7 @@ const CartDropdown = () => {
                       <h6 className='cart-item-title'>
                         <Link
                           className='text-body'
-                          to={`/apps/ecommerce/product/${item.slug}`}
+                          // to={`/apps/ecommerce/product/${item.slug}`}
                           onClick={() => handleDropdownItemClick(item.id)}
                         >
                           {item.name}
@@ -90,7 +90,7 @@ const CartDropdown = () => {
               <h6 className='font-weight-bolder mb-0'>Total:</h6>
               <h6 className='text-primary font-weight-bolder mb-0'>${Number(total.toFixed(2))}</h6>
             </div>
-            <Button.Ripple tag={Link} to='/apps/ecommerce/checkout' color='primary' block onClick={toggle}>
+            <Button.Ripple tag={Link} color='primary' block onClick={toggle}>
               Checkout
             </Button.Ripple>
           </li>
