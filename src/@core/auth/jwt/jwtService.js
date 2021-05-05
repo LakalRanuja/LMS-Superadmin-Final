@@ -99,7 +99,7 @@ export default class JwtService {
   register(...args) {
     return axios.post(this.jwtConfig.registerEndpoint, ...args)
   }
-
+  
   refreshToken() {
     return axios.post(this.jwtConfig.refreshEndpoint, {
       refreshToken: this.getRefreshToken()
