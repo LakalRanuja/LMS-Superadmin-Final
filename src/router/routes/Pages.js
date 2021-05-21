@@ -129,6 +129,7 @@ const PagesRoutes = [
   {
     path: '/pages/add grades/editNew/:id',
     exact: true,
+    appLayout: true,
     component: lazy(() => import('../../views/pages/blog/editNew')),
     meta: {
       navLink: '/pages/blog/edit'
@@ -137,6 +138,7 @@ const PagesRoutes = [
   {
     path: '/pages/add grades/editNew',
     exact: true,
+    appLayout: true,
     component: () => <Redirect to='/pages/add grades/editNew/1' />
   },
   // {

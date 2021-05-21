@@ -1,5 +1,5 @@
 // ** React Import
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 
 // ** Custom Components
 import Sidebar from '@components/sidebar'
@@ -17,7 +17,10 @@ import avatar from '../../../../assets/images/avatars/avatar-blank.png'
 
 // ** Store & Actions
 import { addUser } from '../store/action'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { saveSchool } from "../../../../service/schoolService"
+import { getToast } from '../../../../configs/toastConfig'
+import { saveSchoolAction } from '../store/action/schoolAction'
 
 const SidebarNewUsers = ({ open, toggleSidebar }) => {
   // ** States
@@ -26,27 +29,58 @@ const SidebarNewUsers = ({ open, toggleSidebar }) => {
 
   // ** Store Vars
   const dispatch = useDispatch()
+  const schoolSaveSuccess = useSelector(state => state.school.schoolSuccess)
+  const schoolSaveFailed = useSelector(state => state.school.schoolFailed)
+  const schoolSaveLoading = useSelector(state => state.school.schoolLoading)
 
   // ** Vars
   const { register, errors, handleSubmit } = useForm()
 
+  // ** UseEffector
+  useEffect(() => {
+    if (schoolSaveSuccess && schoolSaveSuccess !== null) {
+      if (schoolSaveSuccess.code === 200) {
+        alert('Done')
+        getToast(schoolSaveSuccess)
+      }
+    } else if (schoolSaveFailed) {
+      getToast(schoolSaveFailed)
+    }
+  }, [schoolSaveSuccess, schoolSaveFailed])
+
+
   // ** Function to handle form submit
-  const onSubmit = values => {
+  const onSubmit = (data) => {
+    console.log('------------////////////////------------')
+    console.log(data)
+    console.log('------------////////////////------------')
     if (isObjEmpty(errors)) {
       toggleSidebar()
-      dispatch(
-        addUser({
-          fullName: values['full-name'],
-          company: values.company,
-          role,
-          username: values.username,
-          country: values.country,
-          contact: values.contact,
-          email: values.email,
-          currentPlan: plan,
-          status: 'active',
-          avatar: ''
-        })
+
+      dispatch(saveSchoolAction({
+            schoolId: 3,
+            schoolCode: "SDD",
+            password: "1234",
+            schoolName: "Mahinda College",
+            fullName: "Anill Frenando",
+            address: "No 12 , Galle",
+            profilePic: "",
+            isActive: true,
+            createDate: '2021-01-01'
+      })
+
+      // dispatch(saveSchoolAction({
+      //       fullName: data.fullName,
+      //       company: data.company,
+      //       // role,
+      //       username: data.username,
+      //       country: data.country,
+      //       contact: data.contact,
+      //       email: data.email,
+      //       currentPlan: plan,
+      //       status: 'active',
+      //       avatar: ''
+      //     })
       )
     }
   }
@@ -86,15 +120,15 @@ const SidebarNewUsers = ({ open, toggleSidebar }) => {
       </Media>
       <Form onSubmit={handleSubmit(onSubmit)} style={{marginTop: 10}}>
         <FormGroup>
-          <Label for='full-name'>
+          <Label for='fullName'>
             School Name <span className='text-danger'>*</span>
           </Label>
           <Input
-            name='full-name'
-            id='full-name'
+            name='fullName'
+            id='fullName'
             placeholder='Ananda College Colombo'
             innerRef={register({ required: true })}
-            className={classnames({ 'is-invalid': errors['full-name'] })}
+            className={classnames({ 'is-invalid': errors['fullName'] })}
           />
         </FormGroup>
         <FormGroup>

@@ -45,12 +45,12 @@ const UserEdit = () => {
                   <span className='align-middle d-none d-sm-block'>Account</span>
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink active={activeTab === '2'} onClick={() => toggle('2')}>
                   <Info size={14} />
                   <span className='align-middle d-none d-sm-block'>Information</span>
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               {/* <NavItem>
                 <NavLink active={activeTab === '3'} onClick={() => toggle('3')}>
                   <Share2 size={14} />

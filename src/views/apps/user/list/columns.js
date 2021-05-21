@@ -7,10 +7,13 @@ import Avatar from '@components/avatar'
 // ** Store & Actions
 import { getUser, deleteUser } from '../store/action'
 import { store } from '@store/storeConfig/store'
+import { useDispatch } from 'react-redux'
 
 // ** Third Party Components
 import { Badge, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { Slack, User, Settings, Database, Edit2, MoreVertical, FileText, Trash2, Archive } from 'react-feather'
+import {deleteSchool} from "../../../../service/schoolService"
+
 
 // ** Renders Client Columns
 const renderClient = row => {
@@ -64,6 +67,16 @@ const statusObj = {
   pending: 'light-warning',
   active: 'light-success',
   inactive: 'light-secondary'
+}
+
+const onSubmit = async (id) => {
+  const response = await deleteSchool(id)
+  console.log(response)
+  dispatch(
+      deleteUser({
+        fullName: values['full-name']
+      })
+  )
 }
 
 export const columns = [

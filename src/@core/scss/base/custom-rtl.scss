@@ -13,6 +13,10 @@
 @import 'bootstrap-extended/include'; // Bootstrap includes
 @import 'components/include'; // Components includes
 
+.Toastify__toast-body {
+  color:white!important;
+}
+
 // Align icons position
 .main-menu {
   .navigation li > a > svg,

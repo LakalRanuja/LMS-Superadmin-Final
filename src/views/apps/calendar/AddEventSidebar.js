@@ -73,11 +73,11 @@ const AddEventSidebar = props => {
 
   // ** Select Options
   const options = [
-    { value: 'B', label: 'B', color: 'primary' },
-    { value: 'A', label: 'A', color: 'danger' },
-    { value: 'C', label: 'C', color: 'warning' },
-    { value: 'D', label: 'D', color: 'success' },
-    { value: 'E', label: 'E', color: 'info' }
+    { value: 'Ananda College', label: 'Ananda College'},
+    { value: 'Royal College', label: 'Royal College'},
+    { value: 'Isipathana College', label: 'Isipathana College'},
+    { value: 'Ds.Senanayake College', label: 'Ds.Senanayake College'},
+    { value: 'Sen.Johns College', label: 'Sen.Johns College'}
   ]
 
   const guestsOptions = [
@@ -145,7 +145,7 @@ const AddEventSidebar = props => {
     setLocation('')
     setDesc('')
     setGuests({})
-    setValue([{ value: 'B', label: 'B', color: 'primary' }])
+    setValue([{ value: 'Ananda College', label: 'Ananda College'}])
     setStartPicker(new Date())
     setEndPicker(new Date())
   }
@@ -159,7 +159,7 @@ const AddEventSidebar = props => {
         if (calendar.length) {
           return { label: calendar, value: calendar, color: calendarsColor[calendar] }
         } else {
-          return { value: 'B', label: 'B', color: 'primary' }
+          return { value: 'Ananda College', label: 'Ananda College'}
         }
       }
       setTitle(selectedEvent.title || title)
@@ -325,7 +325,7 @@ const AddEventSidebar = props => {
           </FormGroup>
 
           <FormGroup>
-            <Label for='label'>Label</Label>
+            <Label for='label'>School</Label>
             <Select
               id='label'
               value={value}
@@ -342,7 +342,7 @@ const AddEventSidebar = props => {
           </FormGroup>
 
           <FormGroup>
-            <Label for='startDate'>Start Date</Label>
+            <Label for='startDate'>Start Date & Time</Label>
             <Flatpickr
               required
               id='startDate'
@@ -359,7 +359,7 @@ const AddEventSidebar = props => {
           </FormGroup>
 
           <FormGroup>
-            <Label for='endDate'>End Date</Label>
+            <Label for='endDate'>End Date & Time</Label>
             <Flatpickr
               required
               id='endDate'
@@ -375,7 +375,7 @@ const AddEventSidebar = props => {
             />
           </FormGroup>
 
-          <FormGroup>
+          {/* <FormGroup>
             <CustomInput
               type='switch'
               id='allDay'
@@ -385,9 +385,9 @@ const AddEventSidebar = props => {
               onChange={e => setAllDay(e.target.checked)}
               inline
             />
-          </FormGroup>
+          </FormGroup> */}
 
-          <FormGroup>
+          {/* <FormGroup>
             <Label for='eventURL'>Event URL</Label>
             <Input
               type='url'
@@ -396,9 +396,9 @@ const AddEventSidebar = props => {
               onChange={e => setUrl(e.target.value)}
               placeholder='https://www.google.com'
             />
-          </FormGroup>
+          </FormGroup> */}
 
-          <FormGroup>
+          {/* <FormGroup>
             <Label for='guests'>Guests</Label>
             <Select
               isMulti
@@ -414,12 +414,12 @@ const AddEventSidebar = props => {
                 Option: GuestsComponent
               }}
             />
-          </FormGroup>
+          </FormGroup> */}
 
-          <FormGroup>
+          {/* <FormGroup>
             <Label for='location'>Location</Label>
             <Input id='location' value={location} onChange={e => setLocation(e.target.value)} placeholder='Office' />
-          </FormGroup>
+          </FormGroup> */}
 
           <FormGroup>
             <Label for='description'>Description</Label>

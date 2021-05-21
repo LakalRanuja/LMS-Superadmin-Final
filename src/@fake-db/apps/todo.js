@@ -5,12 +5,12 @@ const data = {
     {
       id: 1,
       title: 'Sri. Gunananda College',
-      dueDate: '2020-11-25',
+      dueDate: '',
       description:
         'Grade 11 maths class - Ananda College',
       assignee: {
-        fullName: 'Jacob Ramirez',
-        avatar: ''
+        fullName: 'Jacob Ramirez'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -20,12 +20,12 @@ const data = {
     {
       id: 2,
       title: 'S.T Sebastian College',
-      dueDate: '2020-12-14',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Andrew Anderson',
-        avatar: ''
+        fullName: 'Andrew Anderson'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -35,12 +35,12 @@ const data = {
     {
       id: 3,
       title: 'Good Shepherd',
-      dueDate: '2020-11-25',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Benjamin Jacobs',
-        avatar: ''
+        fullName: 'Benjamin Jacobs'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -50,12 +50,12 @@ const data = {
     {
       id: 4,
       title: 'ST. Anthony B.M.V College/',
-      dueDate: '2020-11-20',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Curtis Schmidt',
-        avatar: ''
+        fullName: 'Curtis Schmidt'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -65,12 +65,12 @@ const data = {
     {
       id: 5,
       title: 'ST. Mathews College',
-      dueDate: '2020-12-06',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Katherine Perkins',
-        avatar: ''
+        fullName: 'Katherine Perkins'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -80,12 +80,12 @@ const data = {
     {
       id: 6,
       title: 'ST.JOHNS College',
-      dueDate: '2020-12-06',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'David Murphy',
-        avatar: ''
+        fullName: 'David Murphy'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -95,12 +95,12 @@ const data = {
     {
       id: 7,
       title: 'SRI Parakkramabahu College',
-      dueDate: '2020-12-05',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Karina Miller',
-        avatar: ''
+        fullName: 'Karina Miller'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -110,12 +110,12 @@ const data = {
     {
       id: 8,
       title: 'ST. Luicias College',
-      dueDate: '2020-12-08',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Thomas Moses',
-        avatar: ''
+        fullName: 'Thomas Moses'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'],
       isCompleted: false,
@@ -125,12 +125,12 @@ const data = {
     {
       id: 9,
       title: 'Lumbini College',
-      dueDate: '2020-11-25',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Angel Morrow',
-        avatar: ''
+        fullName: 'Angel Morrow'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -140,12 +140,12 @@ const data = {
     {
       id: 10,
       title: 'Vishaka College',
-      dueDate: '2020-12-09',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Karen Carrillo',
-        avatar: ''
+        fullName: 'Karen Carrillo'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -155,12 +155,12 @@ const data = {
     {
       id: 11,
       title: 'Sirimavo Bandaranayake ',
-      dueDate: '2020-12-01',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Timothy Brewer',
-        avatar: ''
+        fullName: 'Timothy Brewer'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -170,12 +170,12 @@ const data = {
     {
       id: 12,
       title: 'Mahanama College',
-      dueDate: '2020-12-09',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Brian Barry',
-        avatar: ''
+        fullName: 'Brian Barry'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'],
       isCompleted: false,
@@ -185,12 +185,12 @@ const data = {
     {
       id: 13,
       title: "Thurstan College",
-      dueDate: '2020-12-01',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Joshua Golden',
-        avatar: ''
+        fullName: 'Joshua Golden'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -200,12 +200,12 @@ const data = {
     {
       id: 14,
       title: 'Royal College',
-      dueDate: '2020-11-29',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Paula Hammond',
-        avatar: ''
+        fullName: 'Paula Hammond'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -215,12 +215,12 @@ const data = {
     {
       id: 15,
       title: 'Nalanda College',
-      dueDate: '2020-11-29',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Tyler Garcia',
-        avatar: ''
+        fullName: 'Tyler Garcia'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -230,12 +230,12 @@ const data = {
     {
       id: 16,
       title: 'D.S. Senanayake College',
-      dueDate: '2020-12-12',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Darlene Shields',
-        avatar: ''
+        fullName: 'Darlene Shields'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: true,
@@ -246,12 +246,12 @@ const data = {
       id: 17,
       // title: 'Plan a party for development team 🎁',
       title: 'Isipathana College',
-      dueDate: '2020-12-04',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Destiny Michael',
-        avatar: ''
+        fullName: 'Destiny Michael'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,
@@ -261,12 +261,12 @@ const data = {
     {
       id: 18,
       title: 'Ananda College',
-      dueDate: '2020-11-18',
+      dueDate: '',
       description:
         '',
       assignee: {
-        fullName: 'Danielle Anderson',
-        avatar: ''
+        fullName: 'Danielle Anderson'
+        // avatar: ''
       },
       tags: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
       isCompleted: false,

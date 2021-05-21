@@ -38,8 +38,8 @@ export default [
       //   id: 'view',
       //   title: 'View',
       //   icon: <Circle size={12} />,
-      //   navLink: '/apps/user/view'
-      // },
+      //   navLink: '/pages/add grades/editNew'
+      // }
       // {
       //   id: 'edit',
       //   title: 'Edit',
@@ -62,8 +62,9 @@ export default [
         {
           id: 'blogEdit',
           title: 'Add grades',
-          permissions: ['admin', 'editor'],
+          // permissions: ['admin', 'editor'],
           icon: <Circle size={12} />,
+          // navLink: '/pages/add grades/editNew'
           navLink: '/pages/add grades/editNew'
         }
     ]

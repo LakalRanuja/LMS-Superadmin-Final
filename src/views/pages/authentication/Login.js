@@ -2,11 +2,10 @@ import { useState, useContext, Fragment } from 'react'
 import classnames from 'classnames'
 import Avatar from '@components/avatar'
 import { useSkin } from '@hooks/useSkin'
-import useJwt from '@src/auth/jwt/useJwt'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { toast, Slide } from 'react-toastify'
-import { handleLogin } from '@store/actions/auth'
+// import { handleLogin } from '@store/actions/auth'
 import { AbilityContext } from '@src/utility/context/Can'
 import { Link, useHistory } from 'react-router-dom'
 import InputPasswordToggle from '@components/input-password-toggle'
@@ -29,6 +28,7 @@ import {
 
 import '@styles/base/pages/page-auth.scss'
 import avatar from '../../../assets/images/logo/logo.png'
+import {login} from "../../../service/authService"
 
 const ToastContent = ({ name, role }) => (
     <Fragment>
@@ -56,25 +56,16 @@ const Login = props => {
     const illustration = skin === 'dark' ? 'login-v2-dark.svg' : 'login-v2.svg',
         source = require(`@src/assets/images/pages/${illustration}`).default
 
-    const onSubmit = data => {
-        if (isObjEmpty(errors)) {
-            useJwt
-                .login({ email, password })
-                .then(res => {
-                    const data = { ...res.data.userData, accessToken: res.data.accessToken, refreshToken: res.data.refreshToken }
-                    dispatch(handleLogin(data))
-                    console.log('--------------------------------------')
-                    console.log(res.data.userData.ability)
-                    console.log('--------------------------------------')
-                    ability.update(res.data.userData.ability)
-                    history.push(getHomeRouteForLoggedInUser(data.role))
-                    toast.success(
-                        <ToastContent name={data.fullName || data.username || 'John Doe'} role={data.role || 'admin'} />,
-                        { transition: Slide, hideProgressBar: true, autoClose: 2000 }
-                    )
-                })
-                .catch(err => console.log(err))
-        }
+    const onSubmit = async (data) => {
+        console.log(data)
+       // const response = await login(data)
+
+
+
+
+
+       // console.log(response)
+
     }
 
     return (

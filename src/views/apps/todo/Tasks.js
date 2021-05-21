@@ -80,7 +80,7 @@ const Tasks = props => {
     const item = obj.assignee
 
     if (item.avatar === undefined || item.avatar === null) {
-      return <Avatar img={blankAvatar} imgHeight='32' imgWidth='32' />
+      // return <Avatar img={blankAvatar} imgHeight='32' imgWidth='32' />
     } else if (item.avatar !== '') {
       return <Avatar img={item.avatar} imgHeight='32' imgWidth='32' />
     } else {
@@ -119,20 +119,20 @@ const Tasks = props => {
                   key={item.id}
                   onClick={() => handleTaskClick(item)}
                   className={classnames('todo-item', {
-                    completed: item.isCompleted
+                    // completed: item.isCompleted
                   })}
                 >
                   <div className='todo-title-wrapper'>
                     <div className='todo-title-area'>
                       <MoreVertical className='drag-icon' />
-                      <CustomInput
+                      {/* <CustomInput
                         type='checkbox'
                         className='custom-control-Primary'
                         id={item.title}
                         label=''
                         onChange={e => dispatch(updateTask({ ...item, isCompleted: e.target.checked }))}
                         checked={item.isCompleted}
-                      />
+                      /> */}
                       <span className='todo-title'>{item.title}</span>
                     </div>
                     <div className='todo-item-action mt-lg-0 mt-50'>
@@ -199,12 +199,12 @@ const Tasks = props => {
             <DropdownItem tag={Link} to='/' onClick={e => handleSort(e, 'title-desc')}>
               Sort Z-A
             </DropdownItem>
-            <DropdownItem tag={Link} to='/' onClick={e => handleSort(e, 'assignee')}>
+            {/* <DropdownItem tag={Link} to='/' onClick={e => handleSort(e, 'assignee')}>
               Sort Assignee
-            </DropdownItem>
-            <DropdownItem tag={Link} to='/' onClick={e => handleSort(e, 'due-date')}>
+            </DropdownItem> */}
+            {/* <DropdownItem tag={Link} to='/' onClick={e => handleSort(e, 'due-date')}>
               Sort Due Date
-            </DropdownItem>
+            </DropdownItem> */}
             <DropdownItem tag={Link} to='/' onClick={e => handleSort(e, '')}>
               Reset Sort
             </DropdownItem>

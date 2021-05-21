@@ -1,5 +1,6 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 // ** Custom Components
 import Avatar from '@components/avatar'
@@ -8,10 +9,20 @@ import Avatar from '@components/avatar'
 import { Lock, Edit, Trash2 } from 'react-feather'
 import { Media, Row, Col, Button, Form, Input, Label, FormGroup, Table, CustomInput } from 'reactstrap'
 
+// **
+import { getToast } from '../../../../configs/toastConfig'
+import { updateSchoolAction } from '../store/action/schoolAction'
+
 const UserAccountTab = ({ selectedUser }) => {
   // ** States
   const [img, setImg] = useState(null)
   const [userData, setUserData] = useState(null)
+
+  // ** Store Vars
+  const dispatch = useDispatch()
+  const updateSchoolSuccess = useSelector(state => state.school.schoolSuccess)
+  const updateSchoolFailed = useSelector(state => state.school.schoolFailed)
+  const updateSchoolLoading = useSelector(state => state.school.schoolLoading)
 
   // ** Function to change user image
   const onChange = e => {
@@ -21,6 +32,33 @@ const UserAccountTab = ({ selectedUser }) => {
       setImg(reader.result)
     }
     reader.readAsDataURL(files[0])
+  }
+
+  // ** Update school
+  useEffect(() => {
+    if (updateSchoolSuccess && updateSchoolSuccess !== null) {
+      if (updateSchoolSuccess.code === 200) {
+        alert('Done')
+        getToast(updateSchoolSuccess)
+      }
+    } else if (updateSchoolFailed) {
+      getToast(updateSchoolFailed)
+    }
+  }, [updateSchoolSuccess, updateSchoolFailed])
+
+  // ** Update Button
+  const onSubmit =  (data) => {
+    console.log(data)
+    dispatch(updateSchoolAction({
+      username : data.username,
+      fullName : data.fullName,
+      email : data.email,
+      status : data.status,
+      lastName : data.fullName,
+      mobileNumber : data.contact,
+      date : "2020-01-01",
+      isActive : true
+    }))
   }
 
   // ** Update user image on mount or change

@@ -1,12 +1,25 @@
-import { Fragment, useState } from 'react'
+import {Fragment, useEffect, useState} from 'react'
 import classnames from 'classnames'
 import { useForm, Controller } from 'react-hook-form'
 import { Button, Media, Label, Row, Col, Input, FormGroup, Alert, Form } from 'reactstrap'
+
+import {adminUpdate} from "../../../service/settingService"
+
+import { updateAdmin } from './store/action'
+import {useDispatch, useSelector} from 'react-redux'
+import settingAction, {adminUpdateAction} from './store/action/settingAction'
+import { getToast } from '../../../configs/toastConfig'
 
 const GeneralTabs = ({ data }) => {
   const { register, errors, handleSubmit, control, setValue, trigger } = useForm()
 
   const [avatar, setAvatar] = useState(data.avatar ? data.avatar : '')
+
+  // ** Store Vars
+  const dispatch = useDispatch()
+  const updateSuccess = useSelector(state => state.setting.updateSuccess)
+  const updateFailed = useSelector(state => state.setting.updateFailed)
+  const updateLoading = useSelector(state => state.setting.updateLoading)
 
   const onChange = e => {
     const reader = new FileReader(),
@@ -17,7 +30,30 @@ const GeneralTabs = ({ data }) => {
     reader.readAsDataURL(files[0])
   }
 
-  const onSubmit = data => trigger()
+  // const onSubmit = data => trigger()
+  useEffect(() => {
+      if (updateSuccess && updateSuccess !== null) {
+        if (updateSuccess.code === 200) {
+          getToast(updateSuccess)
+        }
+      } else if (updateFailed) {
+        getToast(updateFailed)
+      }
+  }, [updateSuccess, updateFailed])
+
+  const onSubmit =  (data) => {
+  console.log(data)
+    dispatch(adminUpdateAction(({
+      superAdminId : 1,
+      email : data.email,
+      password : "1111",
+      firstName : data.username,
+      lastName : data.fullName,
+      mobileNumber : data.contact,
+      date : "2020-01-01",
+      isActive : true
+    })))
+  }
 
   return (
     <Fragment>
@@ -97,16 +133,16 @@ const GeneralTabs = ({ data }) => {
             <FormGroup>
               <Label for='company'>Contact</Label>
               <Controller
-                defaultValue={data.company}
+                defaultValue={data.contact}
                 control={control}
                 as={Input}
                 id='company'
                 name='company'
                 placeholder='Company Name'
                 innerRef={register({ required: true })}
-                onChange={e => setValue('company', e.target.value)}
+                onChange={e => setValue('contact', e.target.value)}
                 className={classnames({
-                  'is-invalid': errors.company
+                  'is-invalid': errors.contact
                 })}
               />
             </FormGroup>

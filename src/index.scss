@@ -1,2 +1,9 @@
 @import '../node_modules/prismjs/themes/prism-tomorrow';
 @import './assets/scss/app.scss';
+
+.Toastify__progress-bar {
+  color:white!important;
+}
+.Toastify__toast-body {
+  color:white!important;
+}

@@ -59,13 +59,13 @@ const ModalHeader = props => {
           <Trash className='cursor-pointer mt-25' size={16} onClick={() => handleDeleteTask()} />
         ) : null}
         <span className='todo-item-favorite cursor-pointer mx-75'>
-          <Star
+          {/* <Star
             size={16}
             onClick={() => setImportant(!important)}
             className={classnames({
               'text-warning': important === true
             })}
-          />
+          /> */}
         </span>
         <X className='font-weight-normal mt-25' size={16} onClick={handleTaskSidebar} />
       </div>
@@ -131,16 +131,16 @@ const TaskSidebar = props => {
   // ** Returns sidebar title
   const handleSidebarTitle = () => {
     if (store && !isObjEmpty(store.selectedTask)) {
-      return (
-        <Button.Ripple
-          outline
-          size='sm'
-          onClick={() => setCompleted(!completed)}
-          color={completed === true ? 'success' : 'secondary'}
-        >
-          {completed === true ? 'Completed' : 'Mark Complete'}
-        </Button.Ripple>
-      )
+      // return (
+      //   <Button.Ripple
+      //     outline
+      //     size='sm'
+      //     onClick={() => setCompleted(!completed)}
+      //     color={completed === true ? 'success' : 'secondary'}
+      //   >
+      //     {completed === true ? 'Completed' : 'Mark Complete'}
+      //   </Button.Ripple>
+      // )
     } else {
       return 'Add Grades for school !'
     }
@@ -308,7 +308,7 @@ const TaskSidebar = props => {
         <ModalBody className='flex-grow-1 pb-sm-0 pb-3'>
           <FormGroup>
             <Label className='form-label' for='task-title'>
-              Grade ID <span className='text-danger'>*</span>
+              Grade Name <span className='text-danger'>*</span>
             </Label>
             <Input
               id='task-title'
@@ -318,7 +318,7 @@ const TaskSidebar = props => {
               onChange={e => setTitle(e.target.value)}
             />
           </FormGroup>
-          <FormGroup>
+          {/* <FormGroup>
             <Label className='form-label' for='task-assignee'>
               Schools
             </Label>
@@ -333,8 +333,8 @@ const TaskSidebar = props => {
               onChange={data => setAssignee(data)}
               components={{ Option: AssigneeComponent }}
             />
-          </FormGroup>
-          <FormGroup>
+          </FormGroup> */}
+          {/* <FormGroup>
             <Label className='form-label' for='due-date'>
               Due Date
             </Label>
@@ -346,7 +346,7 @@ const TaskSidebar = props => {
               value={dueDate}
               options={{ dateFormat: 'Y-m-d' }}
             />
-          </FormGroup>
+          </FormGroup> */}
           <FormGroup>
             <Label className='form-label' for='task-tags'>
             Grades
@@ -365,7 +365,7 @@ const TaskSidebar = props => {
               }}
             />
           </FormGroup>
-          <FormGroup>
+          {/* <FormGroup>
             <Label for='task-desc' className='form-label'>
               Description
             </Label>
@@ -383,7 +383,7 @@ const TaskSidebar = props => {
               }}
               onEditorStateChange={data => setDesc(data)}
             />
-          </FormGroup>
+          </FormGroup> */}
           <FormGroup className='my-1'>{renderFooterButtons()}</FormGroup>
         </ModalBody>
       </Form>
